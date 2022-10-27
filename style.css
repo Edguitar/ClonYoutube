@@ -1,82 +1,300 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* --- Colores Globales*/
-
-:root {
-    /*Colores*/
-    --accent-color: #ff0000;
-    --grey-color: #909090;
-    --grey-color-alt: #ccc;
-    --border-color: rgba(0, 0, 0, 0.1);
-    /*Colores de fondo*/
-    --bg-color: #fff;
-    --bg-color-alt: #f9f9f9;
-    --bg-color-active: #e5e5e5;
-    /*Colores de Texto*/
-    --text-color: #030303;
-    --text-color-alt: #606060;
-    --text-color-white: #fff;
-    /*Texto Fuentes*/
-    --body-font: 'Roboto', sans-serif;
-    /*Iconos*/
-    --icon-font: 'icomoon';
-    /*Tamños texto*/
-    --big-font-size: 1.125rem;
-    /*18px*/
-    --normal-font-size: 1rem;
-    /*16px*/
-    --small-font-size: 0.875rem;
-    /*14px*/
-    --smaller-font-size: 0.75rem;
-    /*12px*/
-    --font-bold: 500;
-    /*Otros*/
-    --header-height: 56px;
-    --z-tooltip: 25;
-    --z-fixed: 100;
-}
-
-body {
-    font-family: var(--body-font);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-b {
-    font-weight: var(--font-bold);
-}
-
-button {
-    font-family: var(--body-font);
-}
-
-img {
-    width: 100%;
-}
-
-
-/* --- cabecera principal*/
-
-.main-header {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    align-items: center;
-    height: var(--header-height);
-    background: red;
-    z-index: var(--z-fixed);
-}
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* --- Colores Globales*/
+    
+     :root {
+        /*Colores*/
+        --accent-color: #ff0000;
+        --grey-color: #909090;
+        --grey-color-alt: #ccc;
+        --border-color: rgba(0, 0, 0, 0.1);
+        /*Colores de fondo*/
+        --bg-color: #fff;
+        --bg-color-alt: #f9f9f9;
+        --bg-color-active: #e5e5e5;
+        /*Colores de Texto*/
+        --text-color: #030303;
+        --text-color-alt: #606060;
+        --text-color-white: #fff;
+        /*Texto Fuentes*/
+        --body-font: 'Roboto', sans-serif;
+        /*Iconos*/
+        --icon-font: 'icomoon';
+        /*Tamños texto*/
+        --big-font-size: 1.125rem;
+        /*18px*/
+        --normal-font-size: 1rem;
+        /*16px*/
+        --small-font-size: 0.875rem;
+        /*14px*/
+        --smaller-font-size: 0.75rem;
+        /*12px*/
+        --font-bold: 500;
+        /*Otros*/
+        --header-height: 56px;
+        --z-tooltip: 25;
+        --z-fixed: 100;
+        --border-radius: 2px;
+        --transition-time: 0.25s;
+        --barra-lateral: 240px;
+    }
+    
+    body {
+        font-family: var(--body-font);
+        background-color: var(--bg-color-alt);
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    b {
+        font-weight: var(--font-bold);
+    }
+    
+    button {
+        font-family: var(--body-font);
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    hr {
+        --spacing: 0.75rem;
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: var(--spacing);
+        padding-top: var(--spacing);
+    }
+    
+    .place-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .buttons-container {
+        display: flex;
+        gap: 0.5rem;
+    }
+    /* --- cabecera principal --- */
+    
+    .main-header {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        align-items: center;
+        height: var(--header-height);
+        background: var(--bg-color);
+        z-index: var(--z-fixed);
+    }
+    
+    .main-header .logo {
+        width: 6rem;
+    }
+    
+    .main-header .middle {
+        flex-basis: 720px;
+        padding: 0 2rem;
+    }
+    
+    .main-header .form-search {
+        flex-grow: 1;
+        align-items: stretch;
+    }
+    
+    .main-header .input {
+        flex-grow: 1;
+        padding: 0.5rem;
+        border: 1px solid var(--border-color);
+        border-right: 0;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+    }
+    
+    .main-header .submit {
+        padding: 0 1.5rem;
+        border: 1px solid var(--border-color);
+        font-size: 1.25rem;
+        color: var(--text-color-alt);
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        cursor: pointer;
+    }
+    
+    .main-header .user {
+        padding: 0 1rem;
+    }
+    /* --- Avatar Perfil  --- */
+    
+    .user-avatar {
+        --size: 2rem;
+        width: var(--size);
+        height: var(--size);
+        cursor: pointer;
+        flex: none;
+    }
+    
+    .user-avatar .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    /* --- Botones Header  --- */
+    
+    .action-button {
+        --size: 2.5rem;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        border: 1px solid transparent;
+        background: none;
+        transition: border-color var(--transition-time);
+        cursor: pointer;
+    }
+    
+    .action-button::before {
+        color: var(--text-color-alt);
+        font-size: 1.5rem;
+    }
+    
+    .action-button:active {
+        background-color: var(--bg-color-active);
+        border-color: var(--bg-color-active);
+    }
+    /* --- Tooltip --- */
+    
+    [data-tooltip] {
+        position: relative;
+    }
+    
+    [data-tooltip]:hover::after {
+        opacity: 1;
+    }
+    
+    [data-tooltip]::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        padding: 0.5rem;
+        background-color: var(--text-color-alt);
+        color: var(--text-color-white);
+        font-family: var(--body-font);
+        border-radius: var(--border-radius);
+        opacity: 0;
+        pointer-events: none;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        top: 3rem;
+        transition: opacity var(--transition-time);
+        font-size: var(--smaller-font-size);
+        z-index: var(--z-tooltip);
+    }
+    /* --- Menu Lateral --- */
+    
+    .main-sidebar {
+        --main-nav-padding: 0.5rem 1.5rem;
+        background-color: var(--bg-color);
+        height: calc(100vh - var(--header-height));
+        position: fixed;
+        top: var(--header-height);
+        width: var(--barra-lateral);
+        padding: 0.75rem 0;
+        overflow: auto;
+    }
+    
+    .main-nav .link {
+        color: var(--text-color);
+        font-size: var( --small-font-size);
+        text-decoration: none;
+        padding: var(--main-nav-padding);
+        display: flex;
+        align-items: center;
+    }
+    /* -- Iconos de la navegacion -- */
+    
+    .main-nav .link .icon {
+        font-size: 1.5rem;
+        color: var(--text-color-alt);
+    }
+    
+    .main-nav .link.is-in-live::after,
+    .main-nav .link.is-new::after {
+        --link-icon: '';
+        content: var( --link-icon);
+        font-family: var(--icon-font);
+        margin-left: auto;
+    }
+    
+    .main-nav .link.is-in-live::after {
+        --link-icon: '\e911';
+        color: var(--accent-color);
+    }
+    
+    .main-nav .link.is-new::after {
+        --link-icon: '\e91b';
+        color: #065fd4;
+        font-size: 0.5rem;
+    }
+    
+    .main-nav .link .user-avatar {
+        --size: 1.5rem;
+    }
+    
+    .main-nav .link .icon,
+    .main-nav .link .user-avatar {
+        margin-right: 1.5rem;
+    }
+    
+    .main-nav .link.is-active,
+    .main-nav .link:hover {
+        background-color: var(--bg-color-alt);
+    }
+    
+    .main-nav .link.is-active {
+        font-weight: var(--font-bold);
+    }
+    
+    .main-nav .link.is-active .icon {
+        color: var(--accent-color);
+    }
+    /* -- Titulo secciones en navegacion lateral -- */
+    
+    .nav-title {
+        text-transform: uppercase;
+        color: var(--text-color-alt);
+        font-size: var(--small-font-size);
+        padding: var(--main-nav-padding);
+    }
+    /* --Foter de la navegacion lateral */
+    
+    .main-nav-footer {
+        padding: var(--main-nav-padding);
+        display: grid;
+        gap: 0.75rem;
+        font-size: var(--smaller-font-size);
+    }
+    
+    .main-nav-footer .link-footer {
+        text-decoration: none;
+        font-weight: var(--font-bold);
+        color: var(--text-color-alt);
+        margin-right: 0.5rem;
+        line-height: 1.4rem;
+    }
+    
+    .main-nav-footer .copyright {
+        opacity: 0.6;
+        color: var(--text-color-alt);
+        margin: 0;
+    }
