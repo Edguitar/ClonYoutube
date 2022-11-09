@@ -41,6 +41,13 @@
         --border-radius: 2px;
         --transition-time: 0.25s;
         --barra-lateral: 240px;
+        /* Scroll */
+        --scroll-size: 16px;
+        --scroll-bg: transparent;
+        --scroll-radius: 8px;
+        --scroll-padding: 4px;
+        --thumb-bg: var(var(--grey-color));
+        --thumb-bg-alt: var(var(--grey-color-alt));
     }
     
     body {
@@ -83,6 +90,32 @@
     .buttons-container {
         display: flex;
         gap: 0.5rem;
+    }
+    /* --- Scroll --- */
+    
+    .scroll::-webkit-scrollbar {
+        width: var(--scroll-size);
+        height: var(--scroll-size);
+    }
+    
+    .scroll::-webkit-scrollbar-thumb {
+        background-color: var(--thumb-bg);
+        border-radius: var(--scroll-radius);
+        border: var(--scroll-padding) solid transparent;
+        background-clip: content-box;
+    }
+    
+    .scroll::-webkit-scrollbar-thumb:hover {
+        background-color: var(--thumb-bg-alt);
+    }
+    
+    .scroll:not(body)::-webkit-scrollbar-thumb {
+        display: none;
+        background-color: var(--thumb-bg-altß);
+    }
+    
+    .scroll:not(body):hover::-webkit-scrollbar-thumb {
+        display: block;
     }
     /* --- cabecera principal --- */
     
