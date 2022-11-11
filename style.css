@@ -53,6 +53,7 @@
     body {
         font-family: var(--body-font);
         background-color: var(--bg-color-alt);
+        line-height: 1.15rem;
     }
     
     h1,
@@ -79,6 +80,10 @@
         border-bottom: 1px solid var(--border-color);
         margin-bottom: var(--spacing);
         padding-top: var(--spacing);
+    }
+    
+    .flex {
+        display: flex;
     }
     
     .place-center {
@@ -253,6 +258,7 @@
         padding: var(--main-nav-padding);
         display: flex;
         align-items: center;
+        white-space: nowrap;
     }
     /* -- Iconos de la navegacion -- */
     
@@ -330,4 +336,67 @@
         opacity: 0.6;
         color: var(--text-color-alt);
         margin: 0;
+    }
+    /* ---  Tarejta de video  --- */
+    
+    .card-video {
+        max-width: 300px;
+    }
+    
+    .card-video a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .card-video .cover {
+        position: relative;
+        display: block;
+        aspect-ratio: 16 / 9;
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-video .time {
+        position: absolute;
+        right: 0.5rem;
+        bottom: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: var(--text-color-white);
+        font-size: var(--smaller-font-size);
+        padding: 0 0 0.25rem;
+        border-radius: var(--border-radius);
+    }
+    
+    .card-video .image {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .card-video .user-avatar {
+        margin-right: 0.75rem;
+        --size: 36px;
+    }
+    
+    .card-video .content {
+        font-size: var(--small-font-size);
+        color: var(--text-color-alt);
+    }
+    
+    .card-video .title {
+        color: var(--text-color);
+        margin-bottom: 0.25rem;
+    }
+    /* -- Informacion del video -- */
+    
+    .video-information {}
+    
+    .video-information .views {
+        display: inline-flex;
+    }
+    
+    .video-information .views::after {
+        content: '\e91b';
+        font-family: var(--icon-font);
+        font-size: 0.25rem;
+        padding: 0 0.25rem;
     }
