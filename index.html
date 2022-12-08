@@ -258,23 +258,29 @@
             </footer>
         </nav>
     </div>
+    <main class="card-grid" id="card-grid">
 
-    <article class="card-video">
-        <a href="#" class="cover">
-            <img class="image" src="https://plus.unsplash.com/premium_photo-1663091946297-8050202e1a63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Portada del video">
-            <time class="time">05:00</time>
-        </a>
-        <div class="container flex">
-            <div class="user-avatar">
-                <img class="image" src="/images/yo.JPG" alt="Foto del usuario">
-            </div>
-            <div class="content">
-                <h3 class="title"><a href="#">Titulo del video</a></h3>
-                <p>Nombre del usuario</p>
-                <p class="video-information"><span class="views">100.000 Visualizaciones</span><span>Hace 1 semana</span></p>
-            </div>
-        </div>
-    </article>
+    </main>
+    <template id="video-card">
+            <article class="card-video">
+                <a href="#" class="cover">
+                    <img class="image" src="https://picsum.photos/200/300" alt="Portada del video">
+                    <time class="time">05:00</time>
+                </a>
+                <div class="container flex">
+                    <div class="user-avatar">
+                        <img class="image" src="https://i.pravatar.cc/300" alt="Foto del usuario">
+                    </div>
+                    <div class="content">
+                        <h3 class="title"><a href="#">Titulo del video</a></h3>
+                        <p>Nombre del usuario</p>
+                        <p class="video-information"><span class="views">100.000 Visualizaciones</span><span>Hace 1 semana</span></p>
+                    </div>
+                </div>
+            </article>
+        </template>
+
+    <script src="/js/scripts/cards.js" type="module"></script>
 </body>
 
 </html>

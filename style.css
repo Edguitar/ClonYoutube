@@ -36,6 +36,7 @@
         --font-bold: 500;
         /*Otros*/
         --header-height: 56px;
+        --sidebar-width: 240px;
         --z-tooltip: 25;
         --z-fixed: 100;
         --border-radius: 2px;
@@ -54,6 +55,8 @@
         font-family: var(--body-font);
         background-color: var(--bg-color-alt);
         line-height: 1.15rem;
+        padding-top: var(--header-height);
+        padding-left: var(--sidebar-width);
     }
     
     h1,
@@ -96,6 +99,26 @@
         display: flex;
         gap: 0.5rem;
     }
+    /* --Clases para recortar lineas de texto-- */
+    
+    [class*="rows-text"] {
+        display: -webkit-box;
+        -webkit-line-clamp: var(--rows);
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .rows-text-1 {
+        --rows: 1
+    }
+    
+    .rows-text-2 {
+        --rows: 2
+    }
+    
+    .rows-text-3 {
+        --rows: 3
+    }
     /* --- Scroll --- */
     
     .scroll::-webkit-scrollbar {
@@ -116,7 +139,7 @@
     
     .scroll:not(body)::-webkit-scrollbar-thumb {
         display: none;
-        background-color: var(--thumb-bg-altß);
+        background-color: var(--thumb-bg-alt);
     }
     
     .scroll:not(body):hover::-webkit-scrollbar-thumb {
@@ -246,6 +269,8 @@
         height: calc(100vh - var(--header-height));
         position: fixed;
         top: var(--header-height);
+        left: 0;
+        z-index: 1;
         width: var(--barra-lateral);
         padding: 0.75rem 0;
         overflow: auto;
@@ -340,7 +365,7 @@
     /* ---  Tarejta de video  --- */
     
     .card-video {
-        max-width: 300px;
+        /* max-width: 300px; */
     }
     
     .card-video a {
@@ -351,7 +376,7 @@
     .card-video .cover {
         position: relative;
         display: block;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 16/9;
         margin-bottom: 0.75rem;
     }
     
@@ -388,8 +413,6 @@
     }
     /* -- Informacion del video -- */
     
-    .video-information {}
-    
     .video-information .views {
         display: inline-flex;
     }
@@ -399,4 +422,14 @@
         font-family: var(--icon-font);
         font-size: 0.25rem;
         padding: 0 0.25rem;
+    }
+    /* -- Grid de Videos-- */
+    
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem 1rem;
+        padding: 1rem 2rem;
+        max-width: 1800px;
+        margin-inline: auto;
     }
