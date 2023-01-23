@@ -195,6 +195,10 @@
     .main-header .user {
         padding: 0 1rem;
     }
+    
+    .main-header .start .action-button {
+        margin-right: 1rem;
+    }
     /* --- Avatar Perfil  --- */
     
     .user-avatar {
@@ -213,23 +217,45 @@
     }
     /* --- Botones Header  --- */
     
-    .action-button {
+    .action-button,
+    .action-button .icon {
         --size: 2.5rem;
-        width: var(--size);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: var(--size);
-        border-radius: 50%;
         border: 1px solid transparent;
         background: none;
         transition: border-color var(--transition-time);
         cursor: pointer;
     }
     
-    .action-button::before {
+    .action-button.has-text {
+        text-transform: uppercase;
+        color: var(--text-color-alt);
+        font-weight: var(--font-bold);
+        font-size: var(--small-font-size);
+    }
+    
+    .action-button.action-button.has-text .icon {
+        --size: 2.25rem;
+        clear: var(--grey-color);
+    }
+    
+    .action-button:not(.has-text),
+    .action-button .icon {
+        width: var(--size);
+        border-radius: 50%;
+    }
+    
+    .action-button::before,
+    .action-button .icon {
         color: var(--text-color-alt);
         font-size: 1.5rem;
     }
     
-    .action-button:active {
+    .action-button:not(.has-text):active,
+    .action-button .icon:active {
         background-color: var(--bg-color-active);
         border-color: var(--bg-color-active);
     }
@@ -260,6 +286,22 @@
         transition: opacity var(--transition-time);
         font-size: var(--smaller-font-size);
         z-index: var(--z-tooltip);
+    }
+    /* Boton bàsico */
+    
+    .button {
+        --button-color: #cc0000;
+        --text-button-color: #fff;
+        --cursor-button: pointer;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        font-weight: var(--font-bold);
+        border: none;
+        font-size: var(--small-font-size);
+        border-radius: var(--border-radius);
+        background-color: var(--button-color);
+        color: var(--text-button-color);
+        cursor: var(--cursor-button);
     }
     /* --- Menu Lateral --- */
     
@@ -432,4 +474,99 @@
         padding: 1rem 2rem;
         max-width: 1800px;
         margin-inline: auto;
+    }
+    /* Pagina de video */
+    
+    body.video-page {
+        padding-left: 0;
+    }
+    
+    .video-page-grid {
+        --gap-page: 1.5rem;
+        width: calc(100% - (var(--gap-page)*2));
+        max-width: 1600px;
+        display: grid;
+        gap: var(--gap-page);
+        grid-template-columns: repeat(11, 1fr);
+        margin-inline: auto;
+        padding-top: var(--gap-page);
+    }
+    
+    .video-column {
+        grid-column-start: span 8;
+    }
+    
+    .video-player .video {
+        aspect-ratio: 16/9;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .video-player .title {
+        font-weight: normal;
+        font-size: var(--big-font-size);
+    }
+    
+    .video-player .video-information {
+        font-size: var(--small-font-size);
+        color: var(--text-color-alt);
+    }
+    
+    .video-player .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .video-player .buttons-container.likes {
+        border-bottom: 2px solid var(--grey-color);
+    }
+    
+    .video-player .border {
+        padding-top: 0;
+    }
+    
+    .cards-sidebar {
+        background-color: blue;
+        grid-column-start: span 3;
+    }
+    /* Estilos informacion del video */
+    
+    .video-player-information {
+        gap: 1rem;
+        color: var(--text-color);
+    }
+    
+    .video-player-information .user-avatar {
+        --size: 3rem;
+    }
+    
+    .video-player-information .content {
+        width: 100%;
+    }
+    
+    .video-player-information .channel-name {
+        color: inherit;
+        text-decoration: none;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-bold);
+    }
+    
+    .video-player-information .subs-count {
+        color: var(--text-color-alt);
+        font-size: var(--smaller-font-size);
+    }
+    
+    .video-player-information .header {
+        margin-bottom: 1rem;
+    }
+    
+    .video-player-information .header .button {
+        margin-left: auto;
+    }
+    
+    .video-player-information .caption {
+        max-width: 600px;
+        line-height: 1.25rem;
+        font-size: var(--small-font-size);
     }

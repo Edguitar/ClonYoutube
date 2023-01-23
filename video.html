@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Video</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/images/icons/style.css">
+</head>
+
+<body class="video-page scroll">
+    <header class="main-header">
+
+        <div class="place-center buttons-container">
+            <button class="action-button icon-menu"></button>
+            <img class="logo" src="/images/logo.svg" alt="logo youtube">
+        </div>
+
+        <div class="middle place-center">
+            <form class="form-search place-center" action="#">
+                <input type="search" placeholder="Buscar" class="input">
+                <button data-tooltip="Buscar" class="submit icon-search"></button>
+            </form>
+            <button data-tooltip="Haz búsquedas por voz" class="action-button icon-microphone"></button>
+        </div>
+        <div class="place-center buttons-container">
+            <button data-tooltip="Crear" class="action-button icon-camera"></button>
+            <button data-tooltip="Aplicaciones de Youtube" class="action-button icon-grid"></button>
+            <button data-tooltip="Notificaciones" class="action-button icon-bell"></button>
+
+            <div class="user">
+                <div class="user-avatar">
+                    <img class="image" src="/images/yo.JPG" alt="Foto del usuario">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="video-page-grid">
+        <main class="video-column">
+            <section class="video-player">
+                <iframe class="video" src="https://www.youtube.com/embed/q2lCm2KAz3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h1 class="title">15 cosas que NO SABÍAS sobre PYTHON</h1>
+                <div class="actions">
+                    <p class="video-information">
+                        <span class="views">100.000 visualizaciones</span>
+                        <span>30 de Jun 2023</span>
+                    </p>
+
+                    <div class="buttons-container">
+                        <div class="buttons-container likes">
+                            <button data-tooltip="Me gusta este video" class="action-button has-text">
+                                <span class="icon icon-like-video"></span>
+                                <span>18.0000</span>
+                            </button>
+
+                            <button data-tooltip="No me gusta este video" class="action-button has-text">
+                                <span class="icon icon-dislike-video"></span>
+                                <span>20.0000</span>
+                            </button>
+
+
+
+                        </div>
+                        <button data-tooltip="Compartir" class="action-button has-text">
+                            <span class="icon icon-share"></span>
+                            <span>Compartir</span>
+                        </button>
+
+                        <button data-tooltip="Guardar" class="action-button has-text">
+                            <span class="icon icon-add-list"></span>
+                            <span>Guardar</span>
+                        </button>
+
+                        <div class="action-button icon icon-horizontal-dots "></div>
+                    </div>
+                </div>
+                <hr class="border">
+            </section>
+
+            <section class="video-player-information flex">
+                <div class="user-avatar">
+                    <img class="image" src="https://yt3.ggpht.com/ytc/AMLnZu8A1wAaWrc94LYTsQNxodZDeODCdOV8IGlU-5MUkw=s48-c-k-c0x00ffffff-no-rj" alt="Foto del usuario">
+                </div>
+                <div class="content">
+                    <header class="header flex">
+                        <div>
+                            <a href="" class="channel-name" data-tooltip="MoureDev by Brais Moure">MoureDev by Brais Moure </a>
+                            <p class="subs-count">300.000 suscriptores</p>
+                        </div>
+                        <button class="button">Suscribirme</button>
+                    </header>
+                    <p class="caption rows-text-3">
+                        13.596 visualizaciones 13 ene 2023 #Python #Programacion Python es uno de los lenguajes de programación más populares de la actualidad, pero... ¿qué más sabes sobre él? Aquí tienes 15 curiosidades que quizás no conozcas. 📱 Mis redes y enlaces de interés
+                        | https://moure.dev 🕹 Twitch (En directo de Lunes a Viernes): https://twitch.tv/mouredev 👾 Discord: https://mouredev.com/discord 🖥 Practica programación: https://retosdeprogramacion.com ⏱ ÍNDICE: 00:00 | Introducción 00:44 |
+                        15 Curiosidades sobre Python 06:13 | Conclusiones #Python #Programacion
+                    </p>
+                    <button class="action-button has-text">
+                        <span>Mostrar más</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+        <aside class="cards-sidebar">
+            <p>ASIDE</p>
+        </aside>
+    </div>
+</body>
+
+</html>
