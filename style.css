@@ -421,10 +421,6 @@
     }
     /* ---  Tarejta de video  --- */
     
-    .card-video {
-        /* max-width: 300px; */
-    }
-    
     .card-video a {
         text-decoration: none;
         color: inherit;
@@ -467,6 +463,29 @@
     .card-video .title {
         color: var(--text-color);
         margin-bottom: 0.25rem;
+    }
+    /* Card Video del Sidebar */
+    
+    .cards-sidebar {
+        display: grid;
+        gap: 1rem;
+        grid-column-start: span 3;
+    }
+    
+    .card-video.in-sidebar {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
+    
+    .card-video.in-sidebar .cover {
+        margin-bottom: 0;
+        min-width: 200px;
+        max-width: 250px;
+    }
+    
+    .card-video.in-sidebar .content {
+        flex-grow: 1;
     }
     /* -- Informacion del video -- */
     
@@ -540,11 +559,6 @@
     .video-player .border {
         padding-top: 0;
     }
-    
-    .cards-sidebar {
-        background-color: blue;
-        grid-column-start: span 3;
-    }
     /* Estilos informacion del video */
     
     .video-player-information {
@@ -589,6 +603,7 @@
     
     .comments-information {
         align-items: center;
+        margin-bottom: 0.5rem;
     }
     
     .comment-form {
@@ -643,3 +658,52 @@
         background-color: #065fd4;
     }
     */
+    /* Componente comentario */
+    
+    .comments-grid {
+        display: grid;
+        gap: 1.5rem;
+    }
+    
+    .comment {
+        gap: 1rem;
+        font-size: var(--small-font-size);
+    }
+    
+    .comment .user-avatar {
+        --size: 2.5rem
+    }
+    
+    .comment .header {
+        font-size: var(--smaller-font-size);
+        margin-bottom: 0.25rem;
+    }
+    
+    .comment .name {
+        margin-right: 0.25rem;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+    
+    .comment .time {
+        color: var(--text-color-alt);
+    }
+    
+    .comment .action-button,
+    .comment .action-button .icon {
+        --size: 2rem;
+        font-size: var(--normal-font-size);
+    }
+    
+    .comment .action-button:hover,
+    .comment .action-button:hover .icon {
+        color: var(--text-color-alt);
+    }
+    
+    .comment .action-button .text {
+        font-size: var(--smaller-font-size);
+    }
+    
+    .comment .buttons-container {
+        margin-left: -0.5rem;
+    }

@@ -15,7 +15,7 @@
 
         <div class="place-center buttons-container">
             <button class="action-button icon-menu"></button>
-            <img class="logo" src="/images/logo.svg" alt="logo youtube">
+            <a href="/"><img class="logo" src="/images/logo.svg" alt="logo youtube"></a>
         </div>
 
         <div class="middle place-center">
@@ -126,12 +126,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="comments-grid" id="comments-grid">
+                    <!-- Se renderiza los comentarios con los scripts -->
+                </div>
             </section>
         </main>
-        <aside class="cards-sidebar">
-            <p>ASIDE</p>
+        <aside class="cards-sidebar" id="card-grid">
+            <!-- Se renderiza los video recomendados de la carpeta scripts -->
         </aside>
     </div>
+    <script src="/js/scripts/comment.js" type="module"></script>
+    <script src="/js/scripts/cards.js" type="module"></script>
 </body>
 
 </html>
